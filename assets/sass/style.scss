@@ -1,0 +1,22 @@
+// Imports Variables mixins
+@import './lib/variables';
+@import './lib/mixins';
+
+//Imports Components parts
+@import './components/header';
+@import './components/aside';
+@import './components/main-contain';
+@import './components/last-news';
+@import './components/middle-categories';
+@import './components/banner';
+@import './components/last-categories';
+@import './components/about';
+@import './components/category';
+@import './components/single-article';
+@import './components/footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

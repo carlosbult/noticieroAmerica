@@ -1,0 +1,107 @@
+.last-news {
+  padding: 0 2em 0 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  position: relative;
+  bottom: 45px;
+
+  &__categories {
+    grid-column: 1 / 4;
+    .categories-list {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+      .categories-item {
+        margin-right: 4rem;
+        list-style: none;
+        margin-bottom: 1em;
+        &__link {
+          text-decoration: none;
+          font-weight: bold;
+          color: grey;
+          &:hover {
+            color: #051f92;
+          }
+        }
+      }
+    }
+    .categories-articles {
+      display: grid;
+      grid-gap: 1.5em;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      .new-article {
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 1em;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+          content: '';
+          background-image: url('../images/new4.jpg');
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          filter: brightness(45%);
+          opacity: 0.85;
+          z-index: -1;
+        }
+
+        &__title {
+          color: white;
+          width: 90%;
+        }
+        .data-article {
+          display: flex;
+          margin: 1em 0 1em 0;
+          border-bottom: 1px solid rgba($color: white, $alpha: 0.5);
+          padding-bottom: 1em;
+          &__category {
+            color: red;
+            font-weight: bold;
+            padding-right: 0.5em;
+            border-right: 1px solid white;
+          }
+          &__date {
+            color: white;
+            padding-left: 0.5em;
+          }
+        }
+        .info-article {
+          i {
+            border-right: 1px solid white;
+            padding: 0 1em 0 1em;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .last-news {
+    &__categories {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .last-news {
+    padding: 0 1em 0 1em;
+    overflow: hidden;
+    &__categories {
+      .categories-list {
+        overflow: auto;
+      }
+    }
+  }
+}

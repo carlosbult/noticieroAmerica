@@ -1,0 +1,46 @@
+.categories {
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  padding: 0 2em 2em 2em;
+  position: relative;
+  bottom: 50px;
+
+  .article-category {
+    margin-bottom: 1em;
+    .article-img {
+      overflow: hidden;
+      width: 100%;
+      height: 350px;
+      img {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .article-info {
+      border-bottom: 2px solid black;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em 0 0.5em 0;
+      margin-bottom: 0.5em;
+      width: 100%;
+      .date {
+        color: red;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 928px) {
+  .categories {
+    padding: 0 1em 2em 1em;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    .article-category {
+      .article-img {
+        height: auto;
+      }
+    }
+  }
+}

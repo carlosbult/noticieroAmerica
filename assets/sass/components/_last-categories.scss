@@ -1,0 +1,103 @@
+.last-categories {
+  padding: 5em 2em 3em 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5em;
+  .last-single-category {
+    &__title {
+      color: rgb(245, 32, 32);
+      margin-bottom: 0.5em;
+    }
+    .category-principal {
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 1em;
+      background-size: cover;
+      border: 1px solid black;
+
+      .title {
+        color: white;
+        width: 90%;
+      }
+      .data-article {
+        display: flex;
+        margin: 1em 0 1em 0;
+        border-bottom: 1px solid rgba($color: white, $alpha: 0.5);
+        padding-bottom: 1em;
+        &__category {
+          color: red;
+          font-weight: bold;
+          padding-right: 0.5em;
+          border-right: 1px solid white;
+        }
+        &__date {
+          color: white;
+          padding-left: 0.5em;
+        }
+      }
+      .info-article {
+        i {
+          border-right: 1px solid white;
+          padding: 0 1em 0 1em;
+          color: white;
+        }
+      }
+    }
+
+    .last-principal-category {
+      border: 1px solid black;
+      min-height: 735px;
+      height: 95%;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      &__title {
+        text-decoration: none;
+        color: white;
+        font-size: 3em;
+        font-weight: bold;
+      }
+    }
+
+    .category-list {
+      padding: 1em;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+        .author {
+          font-weight: bold;
+        }
+        .date {
+          font-weight: bold;
+          color: blue;
+        }
+      }
+      .title {
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
+      }
+      .category {
+        font-weight: bold;
+        color: blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .last-categories {
+    padding: 3em 1em 3em 1em;
+    .last-single-category {
+      &__title {
+        color: rgb(63, 63, 63);
+        margin-bottom: 1em 0 0.5em 0;
+      }
+    }
+  }
+}
