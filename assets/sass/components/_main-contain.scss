@@ -14,13 +14,13 @@
     content: '';
     background-image: url('../images/new1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: 50% 50%;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    filter: brightness(45%);
+    filter: brightness(35%);
     opacity: 0.85;
     z-index: -1;
   }
@@ -131,12 +131,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     &--only-media {
       justify-content: flex-end;
     }
 
     .contain-post-data {
+      padding-bottom: 1em;
+      padding-top: 1em;
       span {
         color: white;
         border-right: 1px solid white;
@@ -154,6 +157,7 @@
     }
     .contain-social-media {
       padding-bottom: 1em;
+      padding-top: 1em;
       width: 20%;
       display: flex;
       justify-content: space-around;

@@ -35,6 +35,14 @@
     }
     .socialMedia {
       display: flex;
+      width: 100%;
+      justify-content: space-around;
+      li {
+        list-style: none;
+        i {
+          font-size: 1.8em;
+        }
+      }
     }
   }
 
@@ -55,7 +63,7 @@
       grid-gap: 0.5em;
       &__link {
         color: white;
-        border: 1px solid rgba($color: rgb(179, 255, 0), $alpha: 0.2);
+        border: 1px solid rgba($color: rgb(47, 0, 255), $alpha: 0.2);
         text-decoration: none;
         padding: 0.5em;
       }
