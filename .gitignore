@@ -1,1 +1,8 @@
+#Ignore files configuration
+.vscode
+.sass-cache
+.DS_Store
+.git
+
+#Node modules folder ignore
 node_modules
