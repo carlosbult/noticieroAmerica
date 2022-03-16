@@ -1,6 +1,7 @@
 // Imports Variables mixins
 @import './lib/variables';
 @import './lib/mixins';
+@import './lib/fonts';
 
 //Imports Components parts
 @import './components/header';
@@ -19,4 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
 }
